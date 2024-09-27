@@ -16,9 +16,34 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <header></header>
-
+  <body class="p-0 m-0 bg-[#ebebeb]">
+    <header class="h-20 bg-[#ffe600] pt-3 columns-3">
+      <div class="top-header container">
+        <img class="w-32"
+          src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.82/mercadolibre/logo_large_25years_v2.png"
+        />
+        <div class="input">
+          <input class="inline items-center h-11 box-border w-[80%] py-2.5 px-2 border-none border-0 rounded-none rounded-l-sm outline-none" placeholder="Buscar productos, marcas y mas..." />
+          <button class="w-8 border-none border-0 rounded-none bg-[#fff] inline h-11 rounded-r-sm"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+</div>
     <div class="to-60% from-[#ffe600] to-[#ebebeb] h-72 bg-gradient-to-b"></div>
     <div
       class="container max-w-[1200px] m-auto flex columns-6 -mt-20 h-60 gap-[10px]"
@@ -63,46 +88,53 @@ const { title } = Astro.props;
           d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
       </svg>
     </div>
-    <!--<slot />-->
   </body>
 </html>
-<style>
+<!--<style>
   html,
   body {
     padding: 0;
     margin: 0;
-    background-color: rgb(235, 235, 235);
+    background-color: #ebebeb;
   }
   header {
     height: 80px;
     background: #ffe600;
+    padding-top: 12px;
   }
-  /*.banner {
-    height: 280px;
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 230, 0) 60%,
-      #ebebeb 100%
-    );
-  }*/
 
-  /*.container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }*/
+  header button{
+    width: 32px;
+    border: none;
+    background: #fff;
+    height: 44px;
+    display: inline;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
 
-  /*.cards {
-    gap: 10px;
+  .input{
     display: flex;
-    column-count: 6;
-    /*column-gap: 1px;*/
-  /*margin-top: -80px;
-    height: 240px;
-  }*/
+    align-items: center;
+  }
 
-  /*.card {
-    flex-grow: 1;
-    background-color: #fff;
-    border-radius: 6px;
-  }*/
-</style>
+  .top-header {
+    column-count: 3;
+  }
+
+  header img {
+    width: 120px;
+  }
+  header input {
+    height: 44px;
+    box-sizing: border-box;
+    width: 80%;
+    display: inline;
+    padding: 10px 8px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: none;
+    /*border: 1px solid gray;*/
+    outline: none;
+  }
+</style> -->
